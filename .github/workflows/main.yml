@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@main
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        env:
-          FTP.SERVER: ${{ secrets.FTP.SERVER }}
-          FTP.USERNAME: ${{ secrets.FTP.USERNAME }}
-          FTP.PASSWORD: ${{ secrets.FTP.PASSWORD }}
-          LOCAL_DIR: ./
-          REMOTE_DIR: "/2025/makuraya"
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          remote-dir: /2025/makuraya
+          local-dir: ./
