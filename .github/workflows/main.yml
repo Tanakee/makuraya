@@ -12,8 +12,8 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          remote-dir: /2025/makuraya
-          local-dir: ./
+          ftp_server: ${{ secrets.FTP_SERVER }}
+          ftp_username: ${{ secrets.FTP_USERNAME }}
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          remote_dir: /2025/makuraya
+          local_dir: ./
